@@ -7,7 +7,7 @@ A synthwave experiment on ThreeJS
 
 </br>
 
-### Live demo at: [**>Space**](https://github.com/FrancoAguilera)
+### Live demo at: [**>Space**](https://francoaguilera.github.io/space/)
 
 </br>
 
