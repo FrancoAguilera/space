@@ -19,9 +19,9 @@ function init() {
 
   const geometry = new THREE.BufferGeometry();
   const vertices = [];
-  const size = 20000;
+  const size = 12000;
 
-  for (let i = 0; i < 800000; i++) {
+  for (let i = 0; i < 200000; i++) {
     const x = (Math.random() * size + Math.random() * size) / 2 - size / 2;
     const y = Math.random() * 25;
     const z = (Math.random() * size + Math.random() * size) / 2 - size / 2;
