@@ -4,17 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-  <title>Space</title>
+  <link rel="stylesheet" href="./main.css">
+  <title>Space Between</title>
 </head>
 <body>
 
-  
+
+  <div id="audioPanel" class="audio-controls custom-transition"> 
+    <button id="playButton" class="play-button" type="button"> ▶</button>
+    <input 
+      type="range" 
+      min="0" 
+      max="100" 
+      onchange="adjustVolume(this.value)" 
+      oninput="adjustVolume(this.value)" 
+      value="100"
+    >
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.min.js"></script>
   <script src="./main.js"></script>

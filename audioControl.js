@@ -1,12 +1,25 @@
 const body = document.querySelector("body");
-const audio = document.querySelector("#backgroundMusic");
+const audioPanel = document.querySelector("#audioPanel");
+const playButton = document.querySelector("#playButton");
+const audio = new Audio("./minecraft.mp3");
+
+let playSound = false;
+let panelVisible;
 
 const playAudio = () => {
-  const audio = new Audio("./minecraft.mp3");
-  audio.play();
-  body.removeEventListener("click", playAudio);
-  body.removeEventListener("touchend", playAudio);
+  playSound = !playSound;
+  if (playSound) {
+    audio.play();
+    playButton.textContent = "II";
+  } else {
+    audio.pause();
+    playButton.textContent = "▶";
+  }
 };
 
-body.addEventListener("click", playAudio);
-body.addEventListener("touchend", playAudio);
+const adjustVolume = (value) => {
+  audio.volume = value / 100;
+};
+
+playButton.addEventListener("click", playAudio);
+playButton.addEventListener("touchend", playAudio);
